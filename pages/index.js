@@ -2,27 +2,13 @@ import React from 'react';
 import emailjs from 'emailjs-com';
 import Head from 'next/head'
 import Link from "next/link"
-import Pixel from '../components/Pixel'
+
+
+
+
+
 
 export default function Home() {
-  import ReactPixel from 'react-facebook-pixel';
-
-const advancedMatching = { em: 'some@email.com' }; // optional, more info: https://developers.facebook.com/docs/facebook-pixel/advanced/advanced-matching
-const options = {
-  autoConfig: true, // set pixel's autoConfig. More info: https://developers.facebook.com/docs/facebook-pixel/advanced/
-  debug: false, // enable logs
-};
-  ReactPixel.init('209515740919125', advancedMatching, options);
-
-  ReactPixel.pageView(); // For tracking page view
-  ReactPixel.track(event, data); // For tracking default events. More info about standard events: https://developers.facebook.com/docs/facebook-pixel/implementation/conversion-tracking#standard-events
-  ReactPixel.trackSingle('209515740919125', event, data); // For tracking default events.
-  ReactPixel.trackCustom(event, data); // For tracking custom events. More info about custom events: https://developers.facebook.com/docs/facebook-pixel/implementation/conversion-tracking#custom-events
-  ReactPixel.trackSingleCustom('209515740919125', event, data); // For tracking custom events.
- 
-
- 
-
   function sendEmail(e) {
     e.preventDefault();
 
@@ -42,10 +28,9 @@ const options = {
       <Head>
         <title>AspenHill Capital</title>
         <link rel="icon" href="/images/favicon.png"/>
-        <div>
-          <Pixel name='FACEBOOK_PIXEL_1' />
-        </div>
+        
       </Head>
+      
 
     <h1> We Buy Houses For Cash</h1>
   
